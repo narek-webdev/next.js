@@ -3,11 +3,16 @@ const withPWA = require('next-pwa')
 /** @type {import('next').NextConfig} */
 const nextConfig = withPWA({
   pwa: {
-    dest: 'public'
+    dest: 'public',
+    disable: process.env.NODE_ENV === 'development',
   },
   reactStrictMode: true,
   env: {
-    apiurl: "https://jsonplaceholder.typicode.com"
+    API_URL: "https://jsonplaceholder.typicode.com"
+  },
+  i18n: {
+    locales: ['en', 'ru'],
+    defaultLocale: 'en',
   }
 });
 

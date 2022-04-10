@@ -8,8 +8,12 @@ import Image from 'next/image';
 
 import styles from '../../styles/sass/pages/posts.module.scss';
 
+import { useRouter } from 'next/router';
+
+import PostTranslation from '../../components/translations/posts.translation';
+
 export async function getServerSideProps () {
-    const res = await axios.get(`${process.env.apiurl}/posts`);
+    const res = await axios.get(`${process.env.API_URL}/posts`);
 
     return {
         props: {
@@ -19,8 +23,13 @@ export async function getServerSideProps () {
 }
 
 const Index = ({ data }) => {
+    const router = useRouter()
+
     return (
         <div>
+
+            <h1> {PostTranslation[router.locale]["title"]} </h1>
+
             <Image 
                 src={Next}
                 alt="Next logo"

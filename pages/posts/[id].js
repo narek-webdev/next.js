@@ -3,7 +3,7 @@ import Link from 'next/link'
 import axios from 'axios';
 
 export async function getServerSideProps ({ params }) {
-    const res = await axios.get(`${process.env.apiurl}/posts/${params.id}`);
+    const res = await axios.get(`${process.env.API_URL}/posts/${params.id}`);
 
     return {
         props: {
@@ -12,7 +12,7 @@ export async function getServerSideProps ({ params }) {
     }
 }
 
-const Post = ({ data }) => {
+const Post = ({ data }) => {    
     return (
         <div>
             <Link href={`/posts`}>

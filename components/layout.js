@@ -3,7 +3,11 @@ import Footer from './footer';
 
 import Head from 'next/head';
 
+import { useRouter } from "next/router";
+
 const Layout = ({ children }) => {
+    const router = useRouter();
+    
     return (
         <>
             <Head>
@@ -15,17 +19,19 @@ const Layout = ({ children }) => {
 
                 <link rel="manifest" href="/manifest.json" />
                 
-                <link href='/icons/favicon-16x16.png' rel='icon' type='image/png' sizes='16x16' />
-                <link href='/icons/favicon-32x32.png' rel='icon' type='image/png' sizes='32x32' />
-                <link href='/icons/favicon-96x96.png' rel='icon' type='image/png' sizes='96x96' />
+                <link href='/icons/icon-36x36.png' rel='icon' type='image/png' sizes='36x36' />
+                <link href='/icons/icon-48x48.png' rel='icon' type='image/png' sizes='48x48' />
+                <link href='/icons/icon-96x96.png' rel='icon' type='image/png' sizes='96x96' />
 
-                <link rel="apple-touch-icon" href="/icons/apple-icon.png"></link>
+                <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"></link>
                 <meta name="theme-color" content="#317EFB"/>
             </Head>
 
-            <Header />
-                <main>{children}</main>
-            <Footer />
+            {router.pathname !== "/_error" && <Header />}
+
+            <main>{children}</main>
+            
+            {router.pathname !== "/_error" && <Footer />}
         </>
     )
 }

@@ -35,3 +35,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## SASS folder structure
 https://www.webdesignerdepot.com/2020/12/2-smartest-ways-to-structure-sass/
+
+## PWA (service worker) documentation
+https://blog.usman-s.me/how-to-make-a-nextjs-app-a-pwa-with-offline-support
+
+## PWA icons
+https://cthedot.de/icongen/
