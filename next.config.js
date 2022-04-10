@@ -8,7 +8,7 @@ const nextConfig = withPWA({
   },
   reactStrictMode: true,
   env: {
-    API_URL: "https://jsonplaceholder.typicode.com"
+    API_URL: "https://backend.mrfast.io/api"
   },
   i18n: {
     locales: ['en', 'ru'],
