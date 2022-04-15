@@ -2,16 +2,16 @@ import Head from 'next/head'
 
 import Link from 'next/link'
 
-import axios from 'axios';
+import request from '../../lib/request';
 
 import parse from 'html-react-parser';
 
 export async function getServerSideProps ({ params }) {
-    const res = await axios.get(`${process.env.API_URL}/blogs/${params.url}`);
+    const res = await request("GET", `/blogs/${params.url}`);
 
     return {
         props: {
-            data: res.data.blog[0]
+            data: res.blog[0]
         }
     }
 }

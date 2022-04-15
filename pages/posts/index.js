@@ -10,7 +10,7 @@ import styles from '../../styles/sass/pages/posts.module.scss';
 
 import { useRouter } from 'next/router';
 
-import PostTranslation from '../../components/translations/posts.translation';
+import { PostTranslation } from '../../components/translations/posts.translation';
 
 export async function getServerSideProps () {
     const res = await axios.get(`${process.env.API_URL}/blogs/0/6`);
@@ -36,7 +36,6 @@ const Index = ({ data }) => {
             />
 
             <ul>
-                {console.log(data)}
                 {data.length ? data.map(item => {
                     return (
                         <li key={item.id}>

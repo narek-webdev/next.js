@@ -7,4 +7,4 @@ const PostTranslation = {
     }
 };
 
-export default PostTranslation;
+export { PostTranslation };
