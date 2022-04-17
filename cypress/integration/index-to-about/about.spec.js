@@ -11,5 +11,7 @@ describe('Navigation', () => {
   
       // The new page should contain an h1 with "About page"
       cy.get('h1').contains('About Page')
+
+      cy.get(".custom-inp").type("Narek").should("have.value", "Narek");
     })
 })

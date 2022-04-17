@@ -41,3 +41,9 @@ https://blog.usman-s.me/how-to-make-a-nextjs-app-a-pwa-with-offline-support
 
 ## PWA icons
 https://cthedot.de/icongen/
+
+## cypress documentation
+https://docs.cypress.io/guides/overview/why-cypress
+
+## run cypress
+npm run cypress
