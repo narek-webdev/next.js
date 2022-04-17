@@ -6,6 +6,7 @@ const nextConfig = withPWA({
     dest: 'public',
     disable: process.env.NODE_ENV === 'development',
   },
+  distDir: 'build', //You can specify a name to use for a custom build directory to use instead of .next
   reactStrictMode: true,
   env: {
     API_URL: "https://backend.mrfast.io/api"

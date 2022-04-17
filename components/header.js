@@ -3,10 +3,8 @@ import { useRouter } from "next/router";
 const Header = () => {
     const router = useRouter();
     
-    const changeLanguage = e => {
-        router.push(router.asPath, router.asPath, { locale: e.target.value })
-    }
-
+    const changeLanguage = e => router.push(router.asPath, router.asPath, { locale: e.target.value })
+    
     return (
         <header>
             <nav>
