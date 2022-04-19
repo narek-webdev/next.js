@@ -10,7 +10,9 @@ import styles from '../../styles/sass/pages/posts.module.scss';
 
 import { useRouter } from 'next/router';
 
-import { PostTranslation } from '../../components/translations/posts.translation';
+import PostTranslation from '../../components/translations/post.translation.json';
+
+// import { PostTranslation } from '../../components/translations/posts.translation';
 
 export async function getServerSideProps () {
     const res = await axios.get(`${process.env.API_URL}/blogs/0/6`);
@@ -27,7 +29,6 @@ const Index = ({ data }) => {
 
     return (
         <div>
-
             <h1> {PostTranslation[router.locale]["title"]} </h1>
 
             <Image 
