@@ -12,8 +12,6 @@ import { useRouter } from 'next/router';
 
 import PostTranslation from '../../components/translations/post.translation.json';
 
-// import { PostTranslation } from '../../components/translations/posts.translation';
-
 export async function getServerSideProps () {
     const res = await axios.get(`${process.env.API_URL}/blogs/0/6`);
 
@@ -42,7 +40,7 @@ const Index = ({ data }) => {
                         <li key={item.id}>
                             <Link href={`/posts/${item.url}`}>
                                 <a className={styles.link}> 
-                                    {item.shortContent} 
+                                    {item.shortContent}
                                 </a>
                             </Link>
                         </li>
